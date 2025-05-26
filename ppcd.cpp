@@ -11,9 +11,14 @@
 
 // RLWINM-like instructions mask is placed in output "target" parameter.
 
-#include <stdio.h>
-#include <string.h>
-
+// #include <stdio.h>
+// #include <string.h>
+#define STB_SPRINTF_STATIC 1
+#define STB_SPRINTF_IMPLEMENTATION 1
+#include "stb_sprintf.h"
+#define sprintf(...) stbsp_sprintf(__VA_ARGS__)
+#define strncpy(...) __builtin_strncpy(__VA_ARGS__)
+#define strcpy(...) __builtin_strcpy(__VA_ARGS__)
 #include "CommonDefs.h"
 #include "ppcd.h"
 

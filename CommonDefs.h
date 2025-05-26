@@ -7,23 +7,20 @@
 /*
  * General Data Types.
 */
-
-typedef signed   char       s8;
-typedef signed   short      s16;
-typedef signed   long       s32;
-typedef unsigned char       u8;
-typedef unsigned short      u16;
-typedef unsigned long       u32;
+#include <stdint.h>
+typedef int8_t       s8;
+typedef int16_t      s16;
+typedef int32_t       s32;
+typedef uint8_t       u8;
+typedef uint16_t      u16;
+typedef uint32_t       u32;
 typedef float               f32;
 typedef double              f64;
 
-#ifdef  WINDOWS
-typedef unsigned __int64    u64;
-typedef signed   __int64    s64;
-#else
-typedef unsigned long long  u64;
-typedef signed   long long  s64;
-#endif
+
+typedef uint64_t  u64;
+typedef int64_t  s64;
+
 
 #ifndef __cplusplus
 typedef enum { false = 0, true } bool;

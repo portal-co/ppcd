@@ -1,0 +1,1 @@
+$CXX $CXXFLAGS -c -o ${O:=$(dirname $0)/target}/ppcd.o $(dirname $0)/ppcd.cpp

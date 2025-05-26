@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "Commondefs.h"
+#include "CommonDefs.h"
 #include "ppcd.h"
 
 #define POWERPC_32      // Use generic 32-bit model
@@ -368,7 +368,7 @@ static void bcx(int Disp, int L)
 {
     u64 bd = 0;
     int bo = DIS_RD, bi = DIS_RA;
-    char *r = Disp ? "" : (L ? "lr" : "ctr");
+    const char *r = Disp ? "" : (L ? "lr" : "ctr");
     char *ptr = o->operands;
 
     if( DIS_RB && !Disp ) { ill(); return; }

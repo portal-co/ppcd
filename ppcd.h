@@ -1,6 +1,7 @@
 // See some documentation in CPP file.
 
 #pragma once
+#include "CommonDefs.h"
 
 // Instruction class
 #define PPC_DISA_OTHER      0x0000  // No additional information
